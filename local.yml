@@ -1,0 +1,33 @@
+version: "3"
+
+volumes:
+  webapp_local_postgres_data: {}
+  webapp_local_postgres_data_backups: {}
+
+services:
+  postgres:
+    build:
+      context: .
+      dockerfile: ./compose/local/postgres/Dockerfile
+    image: webapp_local_postgres
+    volumes:
+      - webapp_local_postgres_data:/var/lib/postgresql/data
+      - webapp_local_postgres_data_backups:/backups
+    env_file:
+      - ./.envs/.local/.postgres
+
+  django:
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    image: webapp_local_django
+    depends_on:
+      - postgres
+    volumes:
+      - ./src:/src
+    env_file:
+      - ./.envs/.local/.django
+      - ./.envs/.local/.postgres
+    ports:
+      - "8000:8000"
