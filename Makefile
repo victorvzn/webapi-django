@@ -33,6 +33,9 @@ logs:
 django:
 	@docker-compose run --rm django ${CMD}
 
+makemigrations:
+	@make CMD='python manage.py makemigrations' django
+
 migrate:
 	@make CMD='python manage.py migrate' django
 
@@ -40,4 +43,4 @@ createsuperuser:
 	@make CMD='python manage.py createsuperuser' django
 
 app:
-	@make CMD='django-admin startapp users' django
+	@make CMD='django-admin startapp template' django
