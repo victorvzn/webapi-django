@@ -1,0 +1,25 @@
+[
+    {
+        "model": "users.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$DAPHcT1wgRLa$kdr9AUUxd+ndbG3SrLdHxo5/pYYtE/kz5SyCTzz3iis=",
+            "last_login": "2020-10-23T21:28:33.284Z",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "admin",
+            "last_name": "admin",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-10-23T21:28:29.256Z",
+            "created": "2020-10-23T21:28:29.390Z",
+            "modified": "2020-10-23T21:28:29.390Z",
+            "email": "victor@yopmail.com",
+            "phone_number": "",
+            "is_client": true,
+            "is_verified": false,
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]
