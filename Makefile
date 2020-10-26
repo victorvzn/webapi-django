@@ -42,5 +42,5 @@ migrate:
 createsuperuser:
 	@make CMD='python manage.py createsuperuser' django
 
-app:
-	@make CMD='django-admin startapp template' django
+loaddata:
+	@make CMD='python manage.py loaddata users' django

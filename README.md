@@ -5,7 +5,12 @@
 
 ```
 make install
+make migrate
+make loaddata
 ```
+
+> loaddata: Create an admin user with email 'victor@yopmail.com' and password 'admin'.
+
 
 # How to start?
 
@@ -31,6 +36,10 @@ logs
 
 ```
 django
+makemigrations
 migrate
-createsuper
+createsuperuser
+loaddata
 ```
+
+
