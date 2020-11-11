@@ -44,3 +44,6 @@ createsuperuser:
 
 loaddata:
 	@make CMD='python manage.py loaddata users' django
+
+shell:
+	@make CMD='python manage.py shell_plus' django

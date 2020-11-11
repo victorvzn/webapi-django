@@ -5,8 +5,8 @@ from django.db import models
 from apps.utils.models import BaseModel
 
 
-class Category(BaseModel):
-  """Category model.
+class Tag(BaseModel):
+  """Tag model.
   """
 
   name = models.TextField('name')
