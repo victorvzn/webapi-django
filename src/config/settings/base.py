@@ -3,10 +3,9 @@
 import environ
 
 ROOT_DIR = environ.Path(__file__) - 3
-APPS_DIR = ROOT_DIR.path('src')
+APPS_DIR = ROOT_DIR.path('')
 
 env = environ.Env()
-
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
